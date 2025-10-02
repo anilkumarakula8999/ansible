@@ -1,0 +1,14 @@
+- name: play level variables
+  hosts: localhost
+  connection: local # Ansible is connecting to localhost
+  vars:
+    Name: Anil kumar
+    Company: Sensorise smart soultions pvt ltd
+    Experience: one year
+    Location: Pune
+  tasks:
+  - name: print the course info
+    vars:
+     Name: Anil ambani
+    ansible.builtin.debug:
+     msg: "details of you : {{Name}} ,company: {{Company}} , experience: {{Experience}} , location : {{Location}}"
