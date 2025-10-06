@@ -9,4 +9,4 @@
       msg: "Hello, {{ name | default('Ramesh') }}"
   - name: Variables
     ansible.builtin.debug:
-      msg: "Technologies are : , {{ technologies : | spilt(',') }}"
+      msg: "Technologies are : , {{ technologies  | spilt(',') }}"
