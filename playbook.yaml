@@ -1,6 +1,5 @@
 - name : ping the server
-  hosts : fronted
+  hosts : node
   tasks :
   - name : ping
     ansible.builtin.ping :
-    
