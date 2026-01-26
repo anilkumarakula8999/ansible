@@ -8,7 +8,6 @@
       state: present
     loop:
       - nginx
-      - Mysql
-      - Postgresql
-      - Redis 
-      - MongoDB
+      - mysql
+      - postgresql
+      - redis
