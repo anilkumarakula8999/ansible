@@ -18,4 +18,4 @@
   tasks :
   - name : display string variable
     ansible.builtin.debug:
-      msg : "My name is {{ my_name }} and my age is {{ my_age }} years. I am {{ my_height }} feet tall.strong skills are {{ skills | join(', ') }}. I live in {{ address.city }}, {{ address.country }}." 
+      msg : "My name is {{ my_name }} and my age is {{ my_age }} years. I am {{ my_height }} feet tall.strong skills are {{ skills }}. I live in {{ address.city }}, {{ address.country }}." 
