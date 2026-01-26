@@ -1,0 +1,13 @@
+- name: loops
+  hosts: frontend
+  tasks:
+  - name: looping statement
+    ansible.builtin.debug:
+     msg: "Hello, {{ loop}}"
+     loop:
+     - Anil
+     - akhil
+     - adithya
+     - arjun
+     - akash
+    
