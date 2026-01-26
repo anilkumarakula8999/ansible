@@ -3,11 +3,10 @@
   tasks:
   - name: looping statement
     ansible.builtin.debug:
-     msg: "Hello, {{ loop}}"
-     loop:
-     - Anil
-     - akhil
-     - adithya
-     - arjun
-     - akash
-    
+     msg: "Hello, {{ item }}"
+    loop:
+      - Anil
+      - Akhil
+      - Aditya
+      - Akash
+      - Arun
