@@ -1,0 +1,12 @@
+- name: installing packages
+  hosts: frontend
+  tasks:
+  - name: package installing using loop
+    ansible.builtin.package:
+     msg: "Hello, {{ item }}"
+    loop:
+      - nginx
+      - Mysql
+      - Postgresql
+      - Redis 
+      - MongoDB
