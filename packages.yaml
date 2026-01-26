@@ -1,5 +1,6 @@
 - name: installing packages
   hosts: frontend
+  become: yes
   tasks:
   - name: package installing using loop
     ansible.builtin.package:
