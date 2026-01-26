@@ -1,6 +1,5 @@
 - name : play -level variable
-  hosts : local
-  connection : local
+  hosts : frontend
   vars: 
     my_name: "Anil Kumar"
     my_age: 26
