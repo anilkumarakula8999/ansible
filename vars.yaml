@@ -1,12 +1,9 @@
-- name : play -level variable
-  hosts : frontend
-  vars: 
-    my_name: "Anil Kumar"
-    my_age: 26
-    my_city: "pune"
-  tasks :
-  - name : print the my info
-    vars :
-      my_city: "pune-sanaswadi"
-    ansible.builtin.debug:
-      msg : "My name is {{ my_name }}. I am {{ my_age }} years old and I live in {{ my_city }}."
+name: "anil kumar"
+age: 26
+city: "hyderabad"
+country: "india"
+skills:
+  - "linux"
+  - "ansible"
+  - "docker"
+  - "kubernetes"

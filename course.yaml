@@ -1,0 +1,14 @@
+- name : reference variable file
+  hosts: [frontend]
+  become : yes
+  vars_files:
+    - vars.yaml
+  tasks :
+  - name : display user information
+    ansible.builtin.debug:
+      msg : |
+        Name: {{ name }}
+        Age: {{ age }}
+        City: {{ city }}
+        Country: {{ country }}
+        Skills: {{ skills | join(', ') }}
