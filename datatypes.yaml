@@ -1,0 +1,21 @@
+- name : data types
+  hosts: frontend
+  become: yes
+  vars : 
+    my_name: "anil kumar" # string
+    my_age: 26 # integer
+    my_height: 5.9 # float 
+    is_married: false # boolean
+    skills:  # list
+      - linux
+      - ansible
+      - docker
+      - kubernetes  
+    address:   # dictionary or Map
+      city: "hyderabad"
+      country: "india"
+      street: "123 main st"
+  tasks :
+  - name : display string variable
+    ansible.builtin.debug:
+      msg : "My name is {{ my_name }} and my age is {{ my_age }} years. I am {{ my_height }} feet tall.strong skills are {{ skills | join(', ') }}. I live in {{ address.city }}, {{ address.country }}." 
