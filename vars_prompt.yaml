@@ -1,28 +1,28 @@
-name: Vars Prompt Example
-hosts: [frontend]
-become: yes
-vars_prompt:
-  - name: "user_name"
-    prompt: "Enter your name"
-    private: no
+- name: Vars Prompt Example
+  hosts: [frontend]
+  become: yes
+  vars_prompt:
+    - name: "user_name"
+      prompt: "Enter your name"
+      private: no
 
-  - name: "user_age"
-    prompt: "Enter your age"
-    private: no
+    - name: "user_age"
+      prompt: "Enter your age"
+      private: no
 
-  - name: "user_city"
-    prompt: "Enter your city"
-    private: no
+    - name: "user_city"
+      prompt: "Enter your city"
+      private: no
 
-  - name: "user_country"
-    prompt: "Enter your country"
-    private: no
-tasks:
-  - name: Display user information
-    ansible.builtin.debug:
-      msg: |
-        Name: {{ user_name }}
-        Age: {{ user_age }}
-        City: {{ user_city }}
-        Country: {{ user_country }}
+    - name: "user_country"
+      prompt: "Enter your country"
+      private: no
+  tasks:
+    - name: Display user information
+      ansible.builtin.debug:
+        msg: |
+          Name: {{ user_name }}
+          Age: {{ user_age }}
+          City: {{ user_city }}
+          Country: {{ user_country }}
 
