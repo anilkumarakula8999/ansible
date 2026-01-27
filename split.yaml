@@ -1,9 +1,9 @@
-- name: split function
+- name : split playbook
   hosts: frontend
-  become: yes
   vars:
-   My_name: Anil Kumar ,Anil , Akula, Akula anil royals, Royals
+    technologies: Ansible,Docker,Kubernetes,Python,Git,Linux
   tasks:
-  - name: using split function
+  - name: split functions
     ansible.builtin.debug:
-      msg: "Name: {{My_name | split(',')}}" 
+     msg: "technologies are : {{technologies:split(',')}}"
+     
