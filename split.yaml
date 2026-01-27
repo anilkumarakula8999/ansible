@@ -1,0 +1,9 @@
+- name: split function
+  hosts: frontend
+  become: yes
+  vars:
+   My_name: "Anil kumar , Devops Engineer, India, Bangalore, 560037"
+  tasks:
+  - name: using split function
+    ansible.builtin.debug:
+      msg: "Name: {{My_name | split(',')')}}" 
