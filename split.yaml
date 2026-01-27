@@ -6,4 +6,4 @@
   tasks:
   - name: using split function
     ansible.builtin.debug:
-      msg: "Name: {{My_name | split(',')')}}" 
+      msg: "Name: {{My_name | split(',')}}" 
