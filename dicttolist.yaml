@@ -1,7 +1,7 @@
 - name: dict to list
   hosts: frontend
   vars:
-    my_ips: "192.168.1.1"
+    my_ips: "1922.168.1.1"
     tags:
       ap: viskhapatanam
       hyd: telangana
