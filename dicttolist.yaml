@@ -6,8 +6,7 @@
       - "2001:db8::1"       # Valid IPv6 address
       - "256.1.1.1"         # Invalid IPv4 address (octet > 255)
       - "192.168.1.0/24"    # A network address
-      - "not an IP"  
-         
+      - "not an IP"      
     tags:
       ap: viskhapatanam
       hyd: telangana
@@ -24,4 +23,4 @@
   - name: validate ip address
     ansible.builtin.debug:
      msg: "{{ item }} is {{ 'VALID' if (item | ansible.utils.ipaddr) else 'INVALID' }}"
-  loop: "{{ my_ips }}"
+    loop: "{{ my_ips }}"
