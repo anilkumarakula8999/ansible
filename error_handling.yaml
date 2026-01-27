@@ -9,3 +9,7 @@
   - name: display user info
     ansible.builtin.debug:
       msg: "{{user_output}}"
+
+  - name: display user
+    ansible.builtin.command: useradd anilkumar
+    when: user_output.rc != 0
