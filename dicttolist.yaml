@@ -1,6 +1,13 @@
 - name: dict to list
   hosts: frontend
   vars:
+    my_ips:
+      - "192.168.1.1"       # Valid IPv4 address
+      - "2001:db8::1"       # Valid IPv6 address
+      - "256.1.1.1"         # Invalid IPv4 address (octet > 255)
+      - "192.168.1.0/24"    # A network address
+      - "not an IP"  
+         
     tags:
       ap: viskhapatanam
       hyd: telangana
@@ -13,3 +20,8 @@
   - name: upper case
     ansible.builtin.debug:
      msg: "upper case values are : {{tags | upper}}"
+
+  - name: validate ip address
+    ansible.utils.ipaddr:
+      address: "{{ item }}"
+    loop: "{{ my_ips }}"
