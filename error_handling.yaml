@@ -1,5 +1,8 @@
 - name: error handling
   hosts: frontend
+  become: yes        # 👈 VERY IMPORTANT
+  gather_facts: yes
+
   tasks:
     - name: Check if user exists
       ansible.builtin.command: id anilkumar
