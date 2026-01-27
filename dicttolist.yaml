@@ -12,4 +12,4 @@
 
   - name: upper case
     ansible.builtin.debug:
-     msg: "upper case values are : {{tags | uppercase }}"
+     msg: "upper case values are : {{tags | upper}}"
