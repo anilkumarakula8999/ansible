@@ -1,0 +1,7 @@
+- name: functions
+  hosts: frontend
+  become: yes
+  tasks:
+  - name : test functions
+    ansible.builtin.debug:
+      msg: "{{ Hello world }}"
