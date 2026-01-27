@@ -1,0 +1,11 @@
+- name: error handling
+  hosts: frontend
+  tasks:
+  - name: test errorr handling
+    ansible.builtin.command: id anilkumar
+    register: user_output
+    ignore_errors: true
+
+  - name: display user info
+    ansible.builtin.debug:
+      msg: "User info: {{ user_output.stdout }}"
