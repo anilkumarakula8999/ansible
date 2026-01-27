@@ -1,0 +1,10 @@
+- name: dict to list
+  hosts: frontend
+  tags:
+   ap: viskhapatanam
+   hyd: telangana
+   mp : mumbai
+  tasks:
+  - name: convert dic to list
+    ansible.builtin.debug:
+     msg: "the list of values are {{tags | dict2items}}"
