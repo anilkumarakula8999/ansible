@@ -1,7 +1,7 @@
 - name: dict to list
   hosts: frontend
   vars:
-    my_ips:  "192.168.1.1"
+    my_ips: "192.168.1.1"
     tags:
       ap: viskhapatanam
       hyd: telangana
@@ -16,5 +16,6 @@
      msg: "upper case values are : {{tags | upper}}"
 
   - name: validate ip address
-    ansible.builtin.debug: "{{my_ips | ansible.utils.ipaddr }}"
+    ansible.builtin.debug: 
+     msg: "{{my_ips | ansible.utils.ipaddr }}"
      
