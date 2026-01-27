@@ -2,7 +2,7 @@
   hosts: frontend
   become: yes
   vars:
-   My_name: "Anil kumar , Devops Engineer, India, Bangalore, 560037"
+   My_name: Anil Kumar ,Anil , Akula, Akula anil royals, Royals
   tasks:
   - name: using split function
     ansible.builtin.debug:
