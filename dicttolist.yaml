@@ -1,9 +1,10 @@
 - name: dict to list
   hosts: frontend
-  tags:
-   ap: viskhapatanam
-   hyd: telangana
-   mp : mumbai
+  vars:
+    tags:
+      ap: viskhapatanam
+      hyd: telangana
+      mp : mumbai
   tasks:
   - name: convert dic to list
     ansible.builtin.debug:
