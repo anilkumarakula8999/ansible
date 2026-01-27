@@ -2,9 +2,7 @@
   hosts: frontend
   vars:
     my_ips:
-      - "192.168.1.1"       # Valid IPv4 address    # Valid IPv6 address
-      - "255.1.1.1"         # Invalid IPv4 address (octet > 255)
-      - "192.168.1.0"      # A network address      
+      - "192.168.1.1"    
     tags:
       ap: viskhapatanam
       hyd: telangana
