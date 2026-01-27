@@ -15,4 +15,4 @@
 
     - name: Create user
       ansible.builtin.command:
-      when: user_check.rc != 0
+      when: user_output.rc != 0
