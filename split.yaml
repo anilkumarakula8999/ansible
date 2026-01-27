@@ -5,5 +5,5 @@
   tasks:
   - name: split functions
     ansible.builtin.debug:
-     msg: "technologies are : {{technologies:split(',')}}"
+     msg: "technologies are {{technologies | split(',')}}"
      
