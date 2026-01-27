@@ -6,16 +6,13 @@
   tasks:
     - name: Check if user exists
       ansible.builtin.command: id anilkumar
-      register: user_check
+      register: user_output
       ignore_errors: yes
 
     - name: User already exists (skip creation)
       ansible.builtin.debug:
-        msg: "User 'anilkumar' already exists. Skipping creation."
-      when: user_check.rc == 0
+        msg: "{{ user_output}}"
 
-    - name: Create user if not exists
-      ansible.builtin.user:
-        name: anilkumar
-        state: present
+    - name: Create user
+      ansible.builtin.command:
       when: user_check.rc != 0
