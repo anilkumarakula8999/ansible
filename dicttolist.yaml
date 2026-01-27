@@ -9,3 +9,7 @@
   - name: convert dic to list
     ansible.builtin.debug:
      msg: "the list of values are {{tags | dict2items}}"
+
+  - name: upper case
+    ansible.builtin.debug:
+     msg: "upper case values are : {{tags | uppercase }}"
