@@ -21,6 +21,5 @@
      msg: "upper case values are : {{tags | upper}}"
 
   - name: validate ip address
-    ansible.builtin.debug:
-     msg: "{{ item }} is {{ 'VALID' if (item | ansible.utils.ipaddr) else 'INVALID' }}"
-    loop: "{{ my_ips }}"
+    ansible.builtin.debug: "{{my_ips | ansible.utils.ipaddr }}"
+     
