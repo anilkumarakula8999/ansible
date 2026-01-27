@@ -1,15 +1,18 @@
 - name: error handling
   hosts: frontend
   tasks:
-  - name: test errorr handling
-    ansible.builtin.command: id anilkumar
-    register: user_output
-    ignore_errors: true
+    - name: Check if user exists
+      ansible.builtin.command: id anilkumar
+      register: user_check
+      ignore_errors: yes
 
-  - name: display user info
-    ansible.builtin.debug:
-      msg: "{{user_output}}"
+    - name: User already exists (skip creation)
+      ansible.builtin.debug:
+        msg: "User 'anilkumar' already exists. Skipping creation."
+      when: user_check.rc == 0
 
-  - name: display user
-    ansible.builtin.command: useradd anilkumar
-    when: user_output.rc != 0
+    - name: Create user if not exists
+      ansible.builtin.user:
+        name: anilkumar
+        state: present
+      when: user_check.rc != 0
