@@ -10,7 +10,8 @@
       - linux
       - ansible
       - docker
-      - kubernetes  
+      - kubernetes
+      - docker
     address:   # dictionary or Map
       city: "hyderabad"
       country: "india"
