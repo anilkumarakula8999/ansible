@@ -1,6 +1,6 @@
 - name : install and start nginx
   hosts : frontend
-  become : yes  #to run tasks with sudo privileges means root 
+  become : yes  #to run tasks with sudo privileges means root user
   tasks :
   - name: Install Nginx package
     ansible.builtin.package:
